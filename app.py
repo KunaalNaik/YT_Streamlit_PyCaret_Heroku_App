@@ -17,6 +17,8 @@ def run():
     image = Image.open('logo.png')
     image_hospital = Image.open('hospital.jpg')
 
+    st.title("Streamlit App")
+
     st.image(image, use_column_width=False)
 
     add_selectbox = st.sidebar.selectbox(
