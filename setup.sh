@@ -1,9 +1,3 @@
-0/ https://www.kaggle.com/mirichoi0218/insurance
-
-1/ pip freeze > requirements.txt
-
-2/ Create setup.sh
-
 mkdir -p ~/.streamlit/
 echo "\
 [general]\n\
