@@ -1,3 +1,5 @@
+# streamlit run trial_app.py
+
 import streamlit as st
 
 # Working with Text
