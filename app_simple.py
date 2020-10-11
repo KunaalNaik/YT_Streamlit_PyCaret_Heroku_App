@@ -21,12 +21,12 @@ def run():
     # Display Information on the Sidebar
     st.sidebar.info('This app is created to predict patient hospital charges')
     st.sidebar.success('https://youtube.com/KunaalNaik')
-
     st.sidebar.image(image_hospital)
 
+    # App Title
     st.title("Insurance Charges Prediction App")
 
-
+    # Capture User Inputs
     age = st.number_input('Age', min_value=1, max_value=100, value=25)
     sex = st.selectbox('Sex', ['male', 'female'])
     bmi = st.number_input('BMI', min_value=10, max_value=50, value=10)
@@ -41,13 +41,16 @@ def run():
 
     output = ""
 
+    # Create Dict to provide to Predict Function, also convert to Pandas Dataframe
     input_dict = {'age': age, 'sex': sex, 'bmi': bmi, 'children': children, 'smoker': smoker, 'region': region}
     input_df = pd.DataFrame([input_dict])
 
+    # Prediction happens when Predict Button is pressed
     if st.button("Predict"):
         output = predict(model=model, input_df=input_df)
         output = '$' + str(output)
 
+    # Display the Prediction
     st.success('The output is {}'.format(output))
 
 
