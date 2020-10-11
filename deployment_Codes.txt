@@ -2,7 +2,7 @@
 
 1/ pip freeze > requirements.txt
 
-2/ Create setup.sh
+2/ Create setup.sh - Copy paste these lines of code
 
 mkdir -p ~/.streamlit/
 echo "\
